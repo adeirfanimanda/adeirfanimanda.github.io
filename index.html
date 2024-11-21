@@ -1,10 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta http-equiv="refresh" content="0;url=src/index.html" />
-    <script type="text/javascript">
-      window.location.href = "src/index.html";
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Website</title>
+    <script>
+      function isMobileDevice() {
+        return (
+          typeof window.orientation !== "undefined" ||
+          navigator.userAgent.indexOf("IEMobile") !== -1
+        );
+      }
+
+      if (isMobileDevice()) {
+        window.location.href = "mobile.html";
+      }
     </script>
   </head>
-  <body></body>
+  <body>
+    <h1>Welcome to My Website</h1>
+    <p>This content is only accessible from a desktop device.</p>
+  </body>
 </html>
