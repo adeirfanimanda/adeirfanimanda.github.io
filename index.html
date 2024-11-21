@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Website</title>
+    <title>Redirecting...</title>
     <script>
       function isMobileDevice() {
         return (
@@ -14,11 +14,14 @@
 
       if (isMobileDevice()) {
         window.location.href = "mobile.html";
+      } else {
+        window.location.href = "src/index.html";
       }
     </script>
   </head>
   <body>
-    <h1>Welcome to My Website</h1>
-    <p>This content is only accessible from a desktop device.</p>
+    <noscript>
+      <meta http-equiv="refresh" content="0;url=src/index.html" />
+    </noscript>
   </body>
 </html>
